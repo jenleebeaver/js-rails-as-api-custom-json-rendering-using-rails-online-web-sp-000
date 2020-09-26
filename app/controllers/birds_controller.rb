@@ -9,6 +9,7 @@ class BirdsController < ApplicationController
 
   def show
     bird = Bird.find_by(id: params[:id])
+    #shows all of our collection 
     render json: bird
      render json: {id: bird.id, name: bird.name, species: bird.species } 
   end
