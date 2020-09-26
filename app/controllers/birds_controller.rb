@@ -9,7 +9,7 @@ class BirdsController < ApplicationController
     #we can also use except if we want to exclude certain pieces of data
     render json: birds, except: [:created_at, :updated_at]
     #below is longhand code showing the method used to convert an array to json string (parsing data to make it more readable)
-      render json: birds.to_json(except: [:created_at, :updated_at])
+    render json: birds.to_json(except: [:created_at, :updated_at])
   end
 
   def show
