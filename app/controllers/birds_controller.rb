@@ -4,7 +4,7 @@ class BirdsController < ApplicationController
 
   def index
     birds = Bird.all
-    #slice won't work here, so in order to 
+    #slice won't work here, so in order to
     render json: birds, only: [:id, :name, :species]
   end
 
