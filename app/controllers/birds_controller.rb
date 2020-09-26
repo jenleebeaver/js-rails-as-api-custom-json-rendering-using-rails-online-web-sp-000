@@ -26,5 +26,4 @@ class BirdsController < ApplicationController
     else
       render json: { message: 'Bird not found' }
     end
-
 end
