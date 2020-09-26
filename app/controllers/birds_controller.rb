@@ -21,6 +21,7 @@ class BirdsController < ApplicationController
     #render json: {id: bird.id, name: bird.name, species: bird.species }
     #this code also slices data - a bit more efficien than above code
     render json: bird.slice(:id, :name, :species)
+    render json: {id: bird.id, name: bird.name, species: bird.species }
   end
 
 end
