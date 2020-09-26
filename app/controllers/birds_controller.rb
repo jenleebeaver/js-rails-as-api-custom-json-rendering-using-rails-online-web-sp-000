@@ -12,6 +12,7 @@ class BirdsController < ApplicationController
     #shows all of our collection
     #render json: bird
     #here we are grabbing just the data we need by assigning the keys manually using attributes of bird
+    #this allows us to ommit some data 
     render json: {id: bird.id, name: bird.name, species: bird.species }
   end
 
