@@ -20,8 +20,7 @@ class BirdsController < ApplicationController
     #this allows us to ommit some data
     #render json: {id: bird.id, name: bird.name, species: bird.species }
     #this code also slices data - a bit more efficient than above code
-    render json: bird.slice(:id, :name, :species)
-    render json: {id: bird.id, name: bird.name, species: bird.species }
+    # render json: bird.slice(:id, :name, :species)
   end
 
 end
