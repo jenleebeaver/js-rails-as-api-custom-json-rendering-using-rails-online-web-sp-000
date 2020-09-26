@@ -6,6 +6,8 @@ class BirdsController < ApplicationController
     birds = Bird.all
     #slice won't work here, so we can use the only: option (public method in rails) to grab tha data we want
     render json: birds, only: [:id, :name, :species]
+    #we can also use except if we want to cut out a bit of data 
+    render json: birds, except: [:created_at, :updated_at]
   end
 
   def show
