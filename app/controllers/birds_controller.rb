@@ -1,6 +1,6 @@
 
 class BirdsController < ApplicationController
-  #can see the method actions in routes 
+  #can see the method actions in routes
 
   def index
     birds = Bird.all
