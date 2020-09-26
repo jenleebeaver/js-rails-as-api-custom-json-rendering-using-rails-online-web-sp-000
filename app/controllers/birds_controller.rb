@@ -18,7 +18,7 @@ class BirdsController < ApplicationController
     #render json: bird
     #here we are grabbing just the data we need by assigning the keys manually using attributes of bird
     #this allows us to ommit some data
-    #here we are going to use an if else statement to render a message if data is not returned
+    #here we are going to use an if else statement to render a message if data does not exist
     if bird
     render json: { id: bird.id, name: bird.name, species: bird.species }
     #this code also slices data - a bit more efficient than above code
