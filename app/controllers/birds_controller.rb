@@ -11,7 +11,7 @@ class BirdsController < ApplicationController
     bird = Bird.find_by(id: params[:id])
     #shows all of our collection
     #render json: bird
-    #here we are grabbing just the data we need
+    #here we are grabbing just the data we need by assigning the keys manually using attributes of bird
     render json: {id: bird.id, name: bird.name, species: bird.species }
   end
 
