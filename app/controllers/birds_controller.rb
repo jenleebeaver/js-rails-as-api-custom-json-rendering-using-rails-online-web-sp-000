@@ -1,5 +1,6 @@
 
 class BirdsController < ApplicationController
+  #can see the views in routes 
 
   def index
     birds = Bird.all
