@@ -20,7 +20,10 @@ class BirdsController < ApplicationController
     #this allows us to ommit some data
     #here we are going to use an if else statement to render a message if data does not exist
     if bird
-    render json: { id: bird.id, name: bird.name, species: bird.species }
+      render json: { id: bird.id, name: bird.name, species: bird.species }
+    else
+      render json: { message: 'Bird not found' }
+    end
     #this code also slices data - a bit more efficient than above code
     # render json: bird.slice(:id, :name, :species)
     if bird
