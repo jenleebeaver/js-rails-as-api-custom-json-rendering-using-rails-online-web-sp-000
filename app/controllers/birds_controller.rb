@@ -4,7 +4,7 @@ class BirdsController < ApplicationController
 
   def index
     birds = Bird.all
-    #slice won't work here, so we can use the only: option (public method in rails)
+    #slice won't work here, so we can use the only: option (public method in rails) to grab tha data we want
     render json: birds, only: [:id, :name, :species]
   end
 
